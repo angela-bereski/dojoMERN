@@ -5,36 +5,30 @@ import './App.css';
 function App() {
 
   const [list, setList] = useState([])
-  useEffect(()=>{
-    async function callPokemon() {
-      try {
-        const result = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=807")
-        setList(result.results)
-      } catch(error){
-        console.log(error)
-      }
-    } callPokemon();
-  //   axios.get("https://pokeapi.co/api/v2/pokemon?limit=807")
-  //   .then((result)=>{
-  //     setList(result.results)
-  //   }).catch((err)=>{
-  //     console.log(err)
-  //   })
-  }, [])
+  // useEffect(()=>{
+  //   async function callPokemon() {
+  //     try {
+  //       const result = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=807")
+  //       setList(result.data.results)
+  //     } catch(error){
+  //       console.log(error)
+  //     }
+  //   } callPokemon();
+  // }, [])
 
-  // const apiCall = async () => {
-  //   try {
-  //     const result = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=807")
-  //     setList(result.results)
-  //   } catch(error) {
-  //     console.log(error)
-  //   }
-  // }
+  const getPokemon = async () => {
+    try {
+      const result = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=807")
+      setList(result.data.results)
+    } catch(error) {
+      console.log(error)
+    }
+  }
 
   return (
     <div className="App">
       <div>
-        {/* <button onClick={apiCall}>Get Pokemon</button> */}
+        <button onClick={getPokemon}>Get Pokemon</button>
         {
           list.map((pokemon)=>(
             <h2>{pokemon.name}</h2>

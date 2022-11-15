@@ -11,7 +11,7 @@ function App() {
 
   const Value = (props) => {
     const {val} = useParams();
-      if (isNaN(+{val}) === true) {
+      if (isNaN(val) === true) {
         return (
           <h1>The word is: {val}</h1>
           
@@ -42,7 +42,9 @@ function App() {
     // const {bg} = useParams();
 
     return (
-      <h1 style={{color: {col}, bg: {bg}}}>The word is: {word}</h1>
+      <span style={{color: col, bg: bg}}>
+        <h1>The word is: {word}</h1>
+      </span>
     )
   }
 

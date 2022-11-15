@@ -21,25 +21,9 @@ function App() {
           <h1>The number is: {val}</h1>
         )}
   }
-  
-  // const Number = (props) => {
-  //   const {num} = useParams();
-  //     return (
-  //       <h1>The number is: {num}</h1>
-  //     )
-  // }
-
-  // const Word = (props) => {
-  //   const {word} = useParams();
-  //     return (
-  //     <h1>The word is: {word}</h1>
-  //   )
-  // }
 
   const Styled = (props) => {
     const {word, col, bg} = useParams();
-    // const {col} = useParams();
-    // const {bg} = useParams();
 
     return (
       <span style={{color: col, bg: bg}}>
@@ -54,10 +38,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/:val" element={<Value />} />
-
-          {/* <Route path="/:word" element={<Value />} /> */}
           <Route path="/:word/:color/:bg" element={<Styled />} />
-
         </Routes>
       </div>
     </BrowserRouter>

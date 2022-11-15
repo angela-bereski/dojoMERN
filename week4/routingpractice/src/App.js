@@ -26,8 +26,8 @@ function App() {
     const {word, col, bg} = useParams();
 
     return (
-      <span style={{color: col, bg: bg}}>
-        <h1>The word is: {word}</h1>
+      <span style={{color: col}}>
+        <h1 style={{backgroundColor: bg}}>The word is: {word}</h1>
       </span>
     )
   }
@@ -38,7 +38,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/:val" element={<Value />} />
-          <Route path="/:word/:color/:bg" element={<Styled />} />
+          <Route path="/:word/:col/:bg" element={<Styled />} />
         </Routes>
       </div>
     </BrowserRouter>

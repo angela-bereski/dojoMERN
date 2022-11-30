@@ -17,7 +17,7 @@ const ProductForm = (props) => {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
-                setProducts([...products, res.data]);
+                setProducts([...products, res.data.product]);
             })
             .catch(err => console.log(err))
     }

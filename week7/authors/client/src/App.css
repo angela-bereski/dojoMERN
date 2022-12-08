@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+.App {
+  text-align: center;
+  background-color: aquamarine;
+  padding: 15px;
+  font-family: "Sono";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayFun {
+  margin: 10px;
+  padding: 5px;
+  border:2px solid rgb(9, 187, 187);
+  align-items: center;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.active {
+  color: magenta;
+}
+
+a:link {
+  color: orange;
+}
+
+a:hover {
+  color: white;
+}
+
+.pretty {
+  background-color: rgb(9, 187, 187);
+  color: white;
+  margin: 0px 0px 15px 0px;
+  padding: 20px;
+  width: 85%
+}
+
+.navNav {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
